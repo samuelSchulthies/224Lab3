@@ -42,8 +42,8 @@ int main()
 
 
     // Print out the resulting binary number
-    for (int ROW = 0; ROW < 5; ++ROW){
-        for(int COL = COL - 1; COL >= 0; COL--){
+    for (int ROW = 0; ROW < 5; ROW++){
+        for(int COL = COL - 1; COL >= 0; COL++){
             printf("%d", binaryStorage[ROW][COL]);
         }
         printf("\n");
