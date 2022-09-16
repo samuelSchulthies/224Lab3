@@ -2,8 +2,8 @@
 
 int main()
 {
-    unsigned char u = 51;
-    unsigned char c = '3';
+    unsigned char u = 0xE;
+    unsigned char c = 14;
 
     if (u == c) {
         printf("They are the same!\n");
