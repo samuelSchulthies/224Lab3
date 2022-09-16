@@ -3,32 +3,30 @@
 int main()
 {
 
-    // This is our char being converted
+    // These are our chars being converted
     unsigned char a = 'A';
     unsigned char p = 'p';
     unsigned char w = 'w';
     unsigned char o = 'o';
     unsigned char x = '!';
 
+    // Chars cast to ints to obtain ASCII values
     int aCast = (int) a;
     int pCast = (int) p;
     int wCast = (int) w;
     int oCast = (int) o;
     int xCast = (int) x;
 
+    //An array of each ASCII value
     int collection [5] = {aCast,pCast,wCast,oCast,xCast};
 
+    //An array storing the characters
     char charCollection [5] = {a,p,w,o,x};
 
+    //A 2 dimensional array storing the binary conversions of each character on each row
     int binaryStorage [5][8] = {};
 
-    // You'll also need an array to store the bit string,
-    // either chars or ints will work
-
-    /*
-        Add your binary conversion code here
-    */
-
+    //Binary conversion function check the ASCII value and stores the binary output in the 2D array
     for (int ROW = 0; ROW < 5; ROW++){
         for (int COL = 0; COL < 8; COL++){
             if (collection[ROW]%2 == 1) {
@@ -43,7 +41,7 @@ int main()
     }
 
 
-    // Print out the resulting binary number
+    //Prints the character and its ASCII in binary from the 2D array
     for (int ROW = 0; ROW < 5; ROW++){
         printf("character %c in binary: ", charCollection[ROW]);
         for(int COL = 7; COL >= 0; COL--){
@@ -54,9 +52,5 @@ int main()
 
     return 0;
 }
-
-//int * arraySwitcher(int temp){
-//    if (temp == aCast)
-//}
 
 
