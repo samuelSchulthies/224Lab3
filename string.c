@@ -18,7 +18,7 @@ int main()
     printf("%s", s);
 
     for(int i = 0; i < 9; i++){
-        printf("%x", s[i]);
+        printf("%x\n", s[i]);
     }
 
     return 0;
