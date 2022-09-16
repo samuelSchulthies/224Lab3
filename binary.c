@@ -28,9 +28,10 @@ int main()
 
 
     // Print out the resulting binary number
-    for(int i = j; i > 0; i--){
+    for(int i = 0; i < j; i++){
         printf("%d", bits[i]);
     }
+    printf("\n");
 
     return 0;
 }
