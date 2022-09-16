@@ -17,6 +17,10 @@ int main()
     // Output the array as a C-string
     printf("%s", s);
 
+    for(int i = 0; i < 9; i++){
+        printf("%x", s[i]);
+    }
+
     return 0;
 }
 
