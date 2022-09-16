@@ -10,14 +10,6 @@ int main()
     unsigned char o = 'o';
     unsigned char x = '!';
 
-    unsigned int j = 8;
-
-    unsigned int aBits [j];
-    unsigned int pBits [j];
-    unsigned int wBits [j];
-    unsigned int oBits [j];
-    unsigned int xBits [j];
-
     int aCast = (int) a;
     int pCast = (int) p;
     int wCast = (int) w;
@@ -37,7 +29,7 @@ int main()
 
     for (int ROW = 0; ROW < 5; ROW++){
         for (int COL = 0; COL < 8; COL++){
-            if (collection[COL]%2 == 1) {
+            if (collection[ROW]%2 == 1) {
                 binaryStorage [ROW][COL] = 1;
             }
             else {
