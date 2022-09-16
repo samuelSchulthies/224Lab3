@@ -4,22 +4,29 @@ int main()
 {
 
     // This is our char being converted
-    unsigned char c = 'A';
-    unsigned char u = 'p';
-    unsigned char y = 'w';
-    unsigned char z = 'o';
-    unsigned char v = '!';
+    unsigned char a = 'A';
+    unsigned char p = 'p';
+    unsigned char w = 'w';
+    unsigned char o = 'o';
+    unsigned char x = '!';
 
     unsigned int j = 8;
-    unsigned int bits [j];
 
-    int x = (int) c;
-    int e = (int) u;
-    int r = (int) y;
-    int t = (int) z;
-    int b = (int) v;
+    unsigned int aBits [j];
+    unsigned int pBits [j];
+    unsigned int wBits [j];
+    unsigned int oBits [j];
+    unsigned int xBits [j];
 
-    int collection [5] = {x,e,r,t,b};
+    int aCast = (int) a;
+    int pCast = (int) p;
+    int wCast = (int) w;
+    int oCast = (int) o;
+    int xCast = (int) x;
+
+    int collection [5] = {aCast,pCast,wCast,oCast,xCast};
+
+    int binaryStorage [5][8] = {};
 
     // You'll also need an array to store the bit string,
     // either chars or ints will work
@@ -28,28 +35,33 @@ int main()
         Add your binary conversion code here
     */
 
-    for (int h = 0; h < 5; h++){
-        for (int i = 0; i < j; i++){
-            if (collection[h]%2 == 1){
-                bits[i] = 1;
+    for (int ROW = 0; ROW < 5; ROW++){
+        for (int COL = 0; COL < 8; COL++){
+            if (collection[COL]%2 == 1) {
+                binaryStorage [ROW][COL] = 1;
             }
-            if (collection[h]%2 == 0){
-                bits[i] = 0;
+            else {
+                binaryStorage [ROW][COL] = 0;
             }
-            collection[h] = collection[h] / 2;
+            collection[ROW] = collection[ROW] / 2;
         }
+
     }
 
 
     // Print out the resulting binary number
-    for (int j = 0; j < 5; ++j){
-        for(int i = j - 1; i >= 0; i--){
-            printf("%d", bits[i]);
+    for (int ROW = 0; ROW < 5; ++ROW){
+        for(int COL = COL - 1; COL >= 0; COL--){
+            printf("%d", binaryStorage[ROW][COL]);
         }
         printf("\n");
     }
 
     return 0;
 }
+
+//int * arraySwitcher(int temp){
+//    if (temp == aCast)
+//}
 
 
