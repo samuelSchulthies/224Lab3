@@ -15,7 +15,7 @@ int main()
         Add your binary conversion code here
     */
 
-    for (int i = j; i < 0; i--){
+    for (int i = 0; i < j; i++){
         int x = (int) c;
         if (x%2 == 1){
             bits[i] = 1;
