@@ -18,6 +18,8 @@ int main()
 
     int collection [5] = {aCast,pCast,wCast,oCast,xCast};
 
+    char charCollection [5] = {a,p,w,o,x};
+
     int binaryStorage [5][8] = {};
 
     // You'll also need an array to store the bit string,
@@ -43,7 +45,7 @@ int main()
 
     // Print out the resulting binary number
     for (int ROW = 0; ROW < 5; ROW++){
-        printf("character '%c' in binary: ", collection[ROW]);
+        printf("character %c in binary: ", charCollection[ROW]);
         for(int COL = 7; COL >= 0; COL--){
             printf("%d", binaryStorage[ROW][COL]);
         }
