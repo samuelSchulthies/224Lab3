@@ -16,7 +16,7 @@ int main()
         Add your binary conversion code here
     */
 
-    for (int i = j; i > 0; i--){
+    for (int i = 0; i < j; i++){
         if (x%2 == 1){
             bits[i] = 1;
         }
@@ -28,7 +28,7 @@ int main()
 
 
     // Print out the resulting binary number
-    for(int i = 0; i < j; i++){
+    for(int i = j; i > 0; i--){
         printf("%d", bits[i]);
     }
 
