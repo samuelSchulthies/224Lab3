@@ -43,7 +43,7 @@ int main()
 
     // Print out the resulting binary number
     for (int ROW = 0; ROW < 5; ROW++){
-        printf("letter %c in binary: ", collection[ROW]);
+        printf("character '%c' in binary: ", collection[ROW]);
         for(int COL = 7; COL >= 0; COL--){
             printf("%d", binaryStorage[ROW][COL]);
         }
